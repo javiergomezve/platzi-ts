@@ -1,0 +1,16 @@
+{
+	"name": "platzi-ts",
+	"module": "src/main.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@types/bun": "latest",
+		"prettier": "^3.9.9"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@faker-js/faker": "^10.6.0"
+	}
+}
