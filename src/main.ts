@@ -4,6 +4,7 @@ import { addProduct, products } from "@/products/product.service";
 for (let index = 0; index < 50; index++) {
 	addProduct({
 		id: faker.string.uuid(),
+		title: faker.commerce.productName(),
 		description: faker.commerce.productDescription(),
 		image: faker.image.url(),
 		color: faker.color.human(),
@@ -17,7 +18,6 @@ for (let index = 0; index < 50; index++) {
 			"limited",
 			"trending",
 		]),
-		title: faker.commerce.productName(),
 		createdAt: faker.date.recent(),
 		updatedAt: faker.date.recent(),
 		stock: faker.number.int({ min: 10, max: 100 }),
