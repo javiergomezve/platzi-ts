@@ -1,5 +1,9 @@
 import { faker } from "@faker-js/faker";
-import { addProduct, products } from "@/products/product.service";
+import {
+	addProduct,
+	products,
+	updateProduct,
+} from "@/products/product.service";
 
 for (let index = 0; index < 50; index++) {
 	addProduct({
@@ -22,4 +26,18 @@ for (let index = 0; index < 50; index++) {
 	});
 }
 
-console.log(products);
+console.log(products[0]);
+
+if (products.length > 0) {
+	const p = products[0];
+
+	if (p?.id) {
+		console.log(
+			updateProduct(p.id, {
+				...p,
+				title: "Lorem ipsum doll",
+				stock: 80,
+			})
+		);
+	}
+}

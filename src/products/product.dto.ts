@@ -6,3 +6,5 @@ export interface CreateProductDTO extends Omit<
 > {
 	categoryId: string;
 }
+
+export interface UpdateProductDTO extends Partial<CreateProductDTO> {}
